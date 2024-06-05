@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './ProtectedRoute';
+import Posts from './pages/dashboard/Posts';
 
 const AppRoutes = () => {
   return (
@@ -18,7 +19,10 @@ const AppRoutes = () => {
             <Dashboard />
           </ProtectedRoute>
         }
-      />
+      >
+
+        <Route path="posts" element={<Posts />} />
+        </Route>
     </Routes>
   );
 };
